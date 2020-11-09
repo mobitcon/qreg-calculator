@@ -12,10 +12,15 @@ The three cards in the calculator represent your physical cards. The block A1 is
 Examples:
 
 - Parity Value
+
 ![parity](doc/parity.png)
+
 - Most significant bits (MSB)
+
 ![MSB](doc/MSB.png)
+
 - Least significant bit (LSB)
+
 ![LSB](doc/LSB.png)
 
 
