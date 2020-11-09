@@ -1,118 +1,122 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>QREG Calculator</title>
-    <link rel="stylesheet" href="main.css">
-  </head>
-  <body onload="generateTable()">    
-    <h1>QREG Calculator</h1>   
-    <br>
-      <label id="ERROR">Input Value has to be between 1 to 2048!</label>
-    <br>
-    <fieldset onchange="generateTable()">
-      <input type="radio" checked="true" id="twelve" name="words" value="12">
-      <label for="twelve">12 words</label> 
-      <input type="radio" id="twentyfour" name="words" value="24">
-      <label for="twentyfour">24 words</label>
-    </fieldset> 
-    <br>
-    <br>
-    <table class="a" id ="parityTable">
-        <tr>
-            <th>bip39pos</th>
-            <th>bip39pos Bits</th>
-            <th>card 1</th>
-            <th>card 2</th>
-            <th>card 3</th>  
-        </tr>
-    </table> 
-    <div class="card" id="card1">    
-      <h2>Card 1</h2>
-      <table>
-        <tr>
-          <td>
-    <table class="noBorder" id="card1table1">    
-    </table>
-  </td>
-  <td>    
-    <div>
-    <div class="dot"></div>    
-    <h1>qreg</h1>
-    <div class="cellOpenNone"></div>
-    <div class="cellOpenNone"></div>
-    <div class="cellOpenNone"></div>
-    <div class="cellOpenNone"></div>
-    <div class="cellOpenNone"></div>
-    <br>
-    <div class="dot"></div></td>
-  <td>
-    <table class="noBorder" id="card1table2"></table>     
-    </table>
-  </td>
-  </tr>
-  </table>  
 
-    </div>  
-    <div class="card" id="card2">    
-      <h2>Card 2</h2>
-      <table>
-        <tr>
-          <td>
-    <table class="noBorder" id="card2table1">    
+<head>
+  <meta charset="utf-8">
+  <title>QREG Calculator</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body onload="generateTable()">
+  <h1>QREG Calculator</h1>
+  <br>
+  <label id="ERROR">Input Value has to be between 1 to 2048!</label>
+  <br>
+  <fieldset onchange="generateTable()">
+    <input type="radio" checked="true" id="twelve" name="words" value="12">
+    <label for="twelve">12 words</label>
+    <input type="radio" id="twentyfour" name="words" value="24">
+    <label for="twentyfour">24 words</label>
+  </fieldset>
+  <br>
+  <br>
+  <table class="a" id="parityTable">
+    <tr>
+      <th>bip39pos</th>
+      <th>bip39pos Bits</th>
+      <th>card 1</th>
+      <th>card 2</th>
+      <th>card 3</th>
+    </tr>
+  </table>
+  <div class="card" id="card1">
+    <h2>Card 1</h2>
+    <table>
+      <tr>
+        <td>
+          <table class="noBorder" id="card1table1">
+          </table>
+        </td>
+        <td>
+          <div>
+            <div class="dot"></div>
+            <h1>qreg</h1>
+            <div class="cellOpenNone"></div>
+            <div class="cellOpenNone"></div>
+            <div class="cellOpenNone"></div>
+            <div class="cellOpenNone"></div>
+            <div class="cellOpenNone"></div>
+            <br>
+            <div class="dot"></div>
+        </td>
+        <td>
+          <table class="noBorder" id="card1table2"></table>
     </table>
-  </td>
-  <td>
-    <div>
-    <div class="dot"></div>    
-    <h1>qreg</h1>
-    <div class="cellOpenNone"></div>
-    <div class="cellOpenNone"></div>
-    <div class="cellOpenNone"></div>
-    <div class="cellOpenNone"></div>
-    <div class="cellOpenNone"></div>
-    <br>
-    <div class="dot"></div>
+    </td>
+    </tr>
+    </table>
+
   </div>
-  </td>
-  <td>
-    <table class="noBorder" id="card2table2"></table>     
+  <div class="card" id="card2">
+    <h2>Card 2</h2>
+    <table>
+      <tr>
+        <td>
+          <table class="noBorder" id="card2table1">
+          </table>
+        </td>
+        <td>
+          <div>
+            <div class="dot"></div>
+            <h1>qreg</h1>
+            <div class="cellOpenNone"></div>
+            <div class="cellOpenNone"></div>
+            <div class="cellOpenNone"></div>
+            <div class="cellOpenNone"></div>
+            <div class="cellOpenNone"></div>
+            <br>
+            <div class="dot"></div>
+          </div>
+        </td>
+        <td>
+          <table class="noBorder" id="card2table2"></table>
     </table>
-  </td>
-  </tr>
-  </table>  
+    </td>
+    </tr>
+    </table>
 
-    </div>  
-    <div class="card" id="card3">    
-      <h2>Card 3</h2>
-      <table>
-        <tr>
-          <td>
-    <table class="noBorder" id="card3table1">    
+  </div>
+  <div class="card" id="card3">
+    <h2>Card 3</h2>
+    <table>
+      <tr>
+        <td>
+          <table class="noBorder" id="card3table1">
+          </table>
+        </td>
+        <td>
+          <div>
+            <div class="dot"></div>
+            <h1>qreg</h1>
+            <div class="cellOpenNone"></div>
+            <div class="cellOpenNone"></div>
+            <div class="cellOpenNone"></div>
+            <div class="cellOpenNone"></div>
+            <div class="cellOpenNone"></div>
+            <br>
+            <div class="dot"></div>
+        </td>
+        <td>
+          <table class="noBorder" id="card3table2"></table>
     </table>
-  </td>
-  <td>
-    <div>
-      <div class="dot"></div>    
-      <h1>qreg</h1>
-      <div class="cellOpenNone"></div>
-      <div class="cellOpenNone"></div>
-      <div class="cellOpenNone"></div>
-      <div class="cellOpenNone"></div>
-      <div class="cellOpenNone"></div>
-      <br>
-      <div class="dot"></div>
-  </td>
-  <td>
-    <table class="noBorder" id="card3table2"></table>     
+    </td>
+    </tr>
     </table>
-  </td>
-  </tr>
-  </table>  
 
-    </div>  
-    <script src="app.js">      
-    </script>
-    <noscript>You need to enable JavaScript to view the full site.</noscript>
-  </body>
+  </div>
+  <script src="app.js">
+  </script>
+  <noscript>You need to enable JavaScript to view the full site.</noscript>
+</body>
+
 </html>
