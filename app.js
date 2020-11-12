@@ -1,25 +1,21 @@
 'use strict';
 
 
-var cards;
+let cards;
 
 function generateTable() {
-    var generalTable = document.getElementById('parityTable');
-    var card1Table1 = document.getElementById('card1table1');
-    var card1Table2 = document.getElementById('card1table2');
-    var card2Table1 = document.getElementById('card2table1');
-    var card2Table2 = document.getElementById('card2table2');
-    var card3Table1 = document.getElementById('card3table1');
-    var card3Table2 = document.getElementById('card3table2');
-
-    cards = [[card1Table1, card1Table2], [card2Table1, card2Table2], [card3Table1, card3Table2]]
-    var numberOfRows = 12;
+    let generalTable = document.getElementById('parityTable');
+    
+    cards = [   [document.getElementById('card1table1'), document.getElementById('card1table2')],
+                [document.getElementById('card2table1'), document.getElementById('card2table2')], 
+                [document.getElementById('card3table1'), document.getElementById('card3table2')]]
+    let numberOfRows = 12;
     if (document.getElementById('twentyfour').checked) {
         numberOfRows = 24;
     }
     deleteRows(generalTable, 1);
     for (let index = 0; index < numberOfRows; index++) {
-        var row = generalTable.insertRow();
+        let row = generalTable.insertRow();
         row.id = index;
         row.insertCell(0).innerHTML = "<input id=\"inputValueBox\" onchange=\"calcRow(this)\"/>";
         for (let j = 1; j < 5; j++) {
@@ -32,9 +28,9 @@ function generateTable() {
             deleteRows(table);
             for (let index = 0; index < 12; index++) {
 
-                var cardRow = table.insertRow();
+                let cardRow = table.insertRow();
                 for (let index = 0; index < 9; index++) {
-                    var cell = cardRow.insertCell(index);
+                    let cell = cardRow.insertCell(index);
                     if (index == 6) {
                         cell.classList.add('cellEmpty')
                     }
@@ -54,8 +50,8 @@ function deleteRows(table, min = 0) {
 }
 
 function calcRow(elem) {
-    var row = elem.closest('tr');
-    var Input = elem.value;
+    let row = elem.closest('tr');
+    let Input = elem.value;
     doCalculation(Input, row);
 }
 function doCalculation(Input, row) {
@@ -66,10 +62,10 @@ function doCalculation(Input, row) {
         return;
     }
     //Input is between 1 and 12 bit -> shift the first 6 bits to get the first value
-    var first = Input >>> 6;
+    let first = Input >>> 6;
     //mask the last 6 bits to get second value
-    var second = Input & 63;
-    var xor = first ^ second;
+    let second = Input & 63;
+    let xor = first ^ second;
     setValuesAndInsertRow(first, second, xor, row);
 }
 //number 1, number 2, parity
@@ -80,11 +76,11 @@ const parityOrder = [[0, 1, 2],
 [1, 2, 0]];
 
 function setValuesAndInsertRow(first, second, xor, row) {
-    var rowId = row.id;
-    var currentOrder = parityOrder[rowId % 3];
-    var bitFirst = dec2bin(first, 6);
-    var bitSecond = dec2bin(second, 6);
-    var bitXor = dec2bin(xor, 6);
+    let rowId = row.id;
+    let currentOrder = parityOrder[rowId % 3];
+    let bitFirst = dec2bin(first, 6);
+    let bitSecond = dec2bin(second, 6);
+    let bitXor = dec2bin(xor, 6);
     insertInputBits(1, bitFirst, bitSecond, row, 'transparent');
     insertCellAndSetValue(2 + currentOrder[0], bitFirst, row, '#404040');
     insertCellAndSetValue(2 + currentOrder[1], bitSecond, row, '#808080');
@@ -97,13 +93,13 @@ function setValuesAndInsertRow(first, second, xor, row) {
 }
 
 function setRowTable(rowIndex, bits, order, type) {
-    var tableIndex = 0;
+    let tableIndex = 0;
     if (rowIndex > 12) {
         tableIndex = 1;
         rowIndex = rowIndex - 12;
     }
 
-    var row = cards[order][tableIndex].rows[rowIndex % 12];
+    let row = cards[order][tableIndex].rows[rowIndex % 12];
     while (row.cells.length > 0) {
         row.deleteCell(0)
     }
@@ -119,7 +115,7 @@ function setRowTable(rowIndex, bits, order, type) {
 }
 
 function addCellAndSetClass(row, i, currentChar) {
-    var cell = row.insertCell(i);
+    let cell = row.insertCell(i);
     if (currentChar == 0) {
         cell.classList.add('cellOpen')
     }
@@ -140,7 +136,7 @@ function insertInputBits(cellIndex, firstValue, secondValue, row, backgroundColo
 
 
 function dec2bin(dec, totalBits) {
-    var rawBit = (dec >>> 0).toString(2);
+    let rawBit = (dec >>> 0).toString(2);
     return pad(rawBit, totalBits)
 }
 

@@ -9,110 +9,117 @@
 
 <body onload="generateTable()">
   <h1>QREG Calculator</h1>
+  <div class="card">
+    <h2>Input</h2>
+    <label id="ERROR">Input Value has to be between 1 to 2048!</label>
+    <br>
+    <fieldset onchange="generateTable()">
+      <input type="radio" checked="true" id="twelve" name="words" value="12">
+      <label for="twelve">12 words</label>
+      <input type="radio" id="twentyfour" name="words" value="24">
+      <label for="twentyfour">24 words</label>
+    </fieldset>
+    <br>
+    <br>
+    <table class="a" id="parityTable">
+      <tr>
+        <th>bip39pos</th>
+        <th>bip39pos Bits</th>
+        <th>card 1</th>
+        <th>card 2</th>
+        <th>card 3</th>
+      </tr>
+    </table>
+  </div>
   <br>
-  <label id="ERROR">Input Value has to be between 1 to 2048!</label>
-  <br>
-  <fieldset onchange="generateTable()">
-    <input type="radio" checked="true" id="twelve" name="words" value="12">
-    <label for="twelve">12 words</label>
-    <input type="radio" id="twentyfour" name="words" value="24">
-    <label for="twentyfour">24 words</label>
-  </fieldset>
-  <br>
-  <br>
-  <table class="a" id="parityTable">
-    <tr>
-      <th>bip39pos</th>
-      <th>bip39pos Bits</th>
-      <th>card 1</th>
-      <th>card 2</th>
-      <th>card 3</th>
-    </tr>
-  </table>
-  <div class="card" id="card1">
+  <div class="cardEnclosure">
     <h2>Card 1</h2>
-    <table>
-      <tr>
-        <td>
-          <table class="noBorder" id="card1table1">
-          </table>
-        </td>
-        <td>
-          <div>
-            <div class="dot"></div>
-            <h1>qreg</h1>
-            <div class="cellOpenNone"></div>
-            <div class="cellOpenNone"></div>
-            <div class="cellOpenNone"></div>
-            <div class="cellOpenNone"></div>
-            <div class="cellOpenNone"></div>
-            <br>
-            <div class="dot"></div>
-        </td>
-        <td>
-          <table class="noBorder" id="card1table2"></table>
-    </table>
-    </td>
-    </tr>
-    </table>
-
+    <div class="card" id="card1">
+      <table>
+        <tr>
+          <td>
+            <table class="noBorder" id="card1table1">
+            </table>
+          </td>
+          <td>
+            <div>
+              <div class="dot"></div>
+              <h1 class="qreg">qreg</h1>
+              <div class="cellOpenNone"></div>
+              <div class="cellOpenNone"></div>
+              <div class="cellOpenNone"></div>
+              <div class="cellOpenNone"></div>
+              <div class="cellOpenNone"></div>
+              <br>
+              <div class="dot"></div>
+          </td>
+          <td>
+            <table class="noBorder" id="card1table2"></table>
+      </table>
+      </td>
+      </tr>
+      </table>
+    </div>
   </div>
-  <div class="card" id="card2">
+  <div class="cardEnclosure">
     <h2>Card 2</h2>
-    <table>
-      <tr>
-        <td>
-          <table class="noBorder" id="card2table1">
-          </table>
-        </td>
-        <td>
-          <div>
-            <div class="dot"></div>
-            <h1>qreg</h1>
-            <div class="cellOpenNone"></div>
-            <div class="cellOpenNone"></div>
-            <div class="cellOpenNone"></div>
-            <div class="cellOpenNone"></div>
-            <div class="cellOpenNone"></div>
-            <br>
-            <div class="dot"></div>
-          </div>
-        </td>
-        <td>
-          <table class="noBorder" id="card2table2"></table>
-    </table>
-    </td>
-    </tr>
-    </table>
-
+    <div class="card" id="card2">
+      <table>
+        <tr>
+          <td>
+            <table class="noBorder" id="card2table1">
+            </table>
+          </td>
+          <td>
+            <div>
+              <div class="dot"></div>
+              <h1 class="qreg">qreg</h1>
+              <div class="cellOpenNone"></div>
+              <div class="cellOpenNone"></div>
+              <div class="cellOpenNone"></div>
+              <div class="cellOpenNone"></div>
+              <div class="cellOpenNone"></div>
+              <br>
+              <div class="dot"></div>
+            </div>
+          </td>
+          <td>
+            <table class="noBorder" id="card2table2"></table>
+      </table>
+      </td>
+      </tr>
+      </table>
+    </div>
   </div>
-  <div class="card" id="card3">
+  <div class="cardEnclosure">
     <h2>Card 3</h2>
-    <table>
-      <tr>
-        <td>
-          <table class="noBorder" id="card3table1">
-          </table>
-        </td>
-        <td>
-          <div>
-            <div class="dot"></div>
-            <h1>qreg</h1>
-            <div class="cellOpenNone"></div>
-            <div class="cellOpenNone"></div>
-            <div class="cellOpenNone"></div>
-            <div class="cellOpenNone"></div>
-            <div class="cellOpenNone"></div>
-            <br>
-            <div class="dot"></div>
-        </td>
-        <td>
-          <table class="noBorder" id="card3table2"></table>
-    </table>
-    </td>
-    </tr>
-    </table>
+    <div class="card" id="card3">
+      <table>
+        <tr>
+          <td>
+            <table class="noBorder" id="card3table1">
+            </table>
+          </td>
+          <td>
+            <div>
+              <div class="dot"></div>
+              <h1 class="qreg">qreg</h1>
+              <div class="cellOpenNone"></div>
+              <div class="cellOpenNone"></div>
+              <div class="cellOpenNone"></div>
+              <div class="cellOpenNone"></div>
+              <div class="cellOpenNone"></div>
+              <br>
+              <div class="dot"></div>
+          </td>
+          <td>
+            <table class="noBorder" id="card3table2"></table>
+      </table>
+      </td>
+      </tr>
+      </table>
 
+    </div>
   </div>
   <script src="app.js">
   </script>

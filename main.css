@@ -30,42 +30,52 @@
     border-collapse: collapse;
   }
    */
-   .card {
-    border-radius: 25px;
-    border: 2px solid rgb(63, 61, 61);
-    padding: 20px;
-    min-height: 50px;
-    display: inline-block;
-    /* width: 210px;
-    height: 150px; */
-  }
+.card {
+  border-radius: 25px;
+  border: 2px solid rgb(63, 61, 61);
+  padding: 20px;
+  margin: 5px; 
+  min-width: 540px;
+  display: inline-block;
+}
 
+fieldset {
+  border-radius: 25px;
+  border: 2px solid rgb(63, 61, 61);
+  padding: 20px;
+  margin: 5px; 
+  display: inline-block;
+}
+
+
+.cardEnclosure{
+  display: inline-block;
+}
 
 .cellOpen{
-  border: 2px solid rgb(63, 61, 61);
+  border: 2px dashed rgb(63, 61, 61);
   padding: 3px;
   margin: 3px;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   float: left;
 }
 
 .cellOpenNone{
-  border: 2px solid rgb(63, 61, 61);
+  border: 2px dashed rgb(63, 61, 61);
   padding: 3px;
-  margin: 3px;
-  width: 10px;
-  height: 10px;  
-  justify-content: center;
-  float: none;
+  margin: auto;
+  width: 8px;
+  height: 8px;  
+  justify-content: center;  
 }
 
 .cellClose{
   border: 2px solid rgb(63, 61, 61);
   padding: 3px;
   margin: 3px;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background-color:  rgb(63, 61, 61);
   float: left;
 }
@@ -73,17 +83,18 @@
   border: 2px transparent;
   padding: 3px;
   margin: 3px;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   float: left;
 }
 .dot {
   border: 2px solid rgb(63, 61, 61);
   height: 25px;
   width: 25px;
+  margin: auto;
+  justify-content: center;  
   background-color: transparent;
   border-radius: 50%;
-  display: inline-block;
 }
 
 .noBorder{
@@ -96,7 +107,12 @@ a {
   ::-webkit-scrollbar-track { background-color: rgba(255, 255, 255, 0.3) !important; }
   ::-webkit-scrollbar-thumb { background-color: rgba(255, 255, 255, 0.5) !important; }
   embed[type="application/pdf"] { filter: invert(90%); }
-  
+ 
+.qreg
+{
+  margin: 20px;
+}  
+
 html { 
   color: rgb(191, 191, 191); 
   background: rgb(31, 31, 31) !important; }
@@ -105,8 +121,9 @@ body {
   background-image: none !important; }
   
 input, select, textarea, button { 
-    color: rgb(191, 191, 191);
-     background-color: rgb(31, 31, 31); }
+  color: rgb(191, 191, 191);
+  background-color: rgb(31, 31, 31);
+  margin: 3px; }
 
 font { color: rgb(191, 191, 191); }
 
@@ -124,4 +141,4 @@ ul { font-family: monospace; }
 li { list-style: circle; }
 #ERROR { font-weight: bold; color: rgb(230, 153, 153); visibility: hidden; }.list { list-style: square; }
 #date { font-size: 12px; font-style: italic; font-weight: bold; }
-table, th, td { border: 1px solid rgb(63, 61, 61); border-collapse: collapse; }
+th, td { border: 1px solid rgb(63, 61, 61); border-collapse: collapse; }
