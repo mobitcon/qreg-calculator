@@ -52,11 +52,10 @@
 .cellOpenNone{
   border: 2px dashed rgb(63, 61, 61);
   padding: 3px;
-  margin: 3px;
+  margin: auto;
   width: 10px;
   height: 10px;  
-  justify-content: center;
-  float: none;
+  justify-content: center;  
 }
 
 .cellClose{
@@ -80,9 +79,10 @@
   border: 2px solid rgb(63, 61, 61);
   height: 25px;
   width: 25px;
+  margin: auto;
+  justify-content: center;  
   background-color: transparent;
   border-radius: 50%;
-  display: inline-block;
 }
 
 .noBorder{
