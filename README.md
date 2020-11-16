@@ -27,7 +27,7 @@ Examples:
 
 In the C block can be used for meta data (Will not be used by the calculator).
 
-Sample calculation for input word bip-0039 word *gravity* ->
+Sample calculation for input word bip-0039 *gravity* ->
 
 ```
 word:           gravity

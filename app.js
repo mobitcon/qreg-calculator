@@ -94,7 +94,7 @@ function setValuesAndInsertRow(first, second, xor, row) {
 
 function setRowTable(rowIndex, bits, order, type) {
     let tableIndex = 0;
-    if (rowIndex > 12) {
+    if (rowIndex >= 12) {
         tableIndex = 1;
         rowIndex = rowIndex - 12;
     }
