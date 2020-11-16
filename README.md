@@ -1,4 +1,5 @@
 # qreg-calculator
+
 Repository for the qreg calculator. Implemented as HTML Page with some javascript.
 
 The calculator can be run by downloading this git repository and opening the *index.html* with your preferred browser. The latest version of the calculator will also be available through this [link](https://mango-desert-0e9d5fe03.azurestaticapps.net/).
@@ -23,13 +24,11 @@ Examples:
 
 ![LSB](doc/LSB.png)
 
-
-
 In the C block can be used for meta data (Will not be used by the calculator).
 
-Sample calculation for input word bip-0039 word *gravity* ->
+Sample calculation for input word bip-0039 *gravity* ->
 
-```
+```pseudo
 word:           gravity
 bip39pos:       817
 bip39posBits:   001100110001
