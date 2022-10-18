@@ -1,0 +1,81 @@
+tr, td {padding:0px;}
+th, td { border: 1px solid rgb(63, 61, 61); }
+label {text-align:center;}
+.card {
+  border-radius: 25px;
+  border: 2px solid rgb(63, 61, 61);
+  padding: 20px;
+  margin: 5px; 
+  min-width: 500px;
+  display: inline-block;
+}
+
+.containerDiv{width:100%;}
+.leftDiv{float:left;width:170px;}
+.rightDiv{float:right;width:170px;}
+.middleDiv{margin:0 auto;width:100px;}
+
+fieldset {
+  border-radius: 25px;
+  border: 2px solid rgb(63, 61, 61);
+  padding: 20px;
+  margin: 5px; 
+  display: inline-block;
+}
+.cardEnclosure{
+  display: inline-block;
+}
+
+.cellOpen{
+  border: 2px dashed rgb(63, 61, 61);
+  padding: 4px;
+  margin: 1px;
+  width: 14px;
+  height: 14px;
+  float: left;
+}
+
+.cellOpenNone{
+  border: 2px dashed rgb(63, 61, 61);
+  padding: 3px;
+  margin: 4px auto;
+  width: 14px;
+  height: 14px; 
+  justify-content: center; 
+}
+
+.cellClose{
+  border: 2px solid rgb(63, 61, 61);
+  padding: 4px;
+  margin: 1px;
+  width: 14px;
+  height: 14px;
+  background-color:  rgb(63, 61, 61);
+  float: left;
+}
+.cellEmpty{
+  border: 2px transparent;
+  padding: 4px;
+  margin: 1px;
+  width: 14px;
+  height: 14px;
+  float: left;
+}
+.dot {
+  border: 2px solid rgb(63, 61, 61);
+  height: 25px;
+  width: 25px;
+  margin: auto;
+  justify-content: center;  
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.noBorder{
+  border: 0px 
+}
+
+.qreg
+{
+  margin: 20px;
+}
