@@ -2,17 +2,31 @@
 
 
 let cards;
-
+let numberOfRows = 12;
+	
+window.addEventListener("load", init());
+	
+function switchRows() {
+	console.log(numberOfRows);
+	if(numberOfRows ===12){
+		numberOfRows = 24;
+	}
+	else{
+		numberOfRows = 12;
+	}
+	generateTable();
+}
+function init(){
+	document.getElementById("switch").addEventListener("click", switchRows);
+	generateTable();
+}
 function generateTable() {
+
     let generalTable = document.getElementById('parityTable');
     
     cards = [   [document.getElementById('card1table1'), document.getElementById('card1table2')],
                 [document.getElementById('card2table1'), document.getElementById('card2table2')], 
                 [document.getElementById('card3table1'), document.getElementById('card3table2')]]
-    let numberOfRows = 12;
-    if (document.getElementById('twentyfour').checked) {
-        numberOfRows = 24;
-    }
     deleteRows(generalTable, 1);
     for (let index = 0; index < numberOfRows; index++) {
         let row = generalTable.insertRow();
